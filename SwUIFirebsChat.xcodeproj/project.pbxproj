@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D8A775A02AACA01800C7DB22 /* SwUIFirebsChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A7759F2AACA01800C7DB22 /* SwUIFirebsChatApp.swift */; };
-		D8A775A22AACA01800C7DB22 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A775A12AACA01800C7DB22 /* ContentView.swift */; };
+		D8A775A22AACA01800C7DB22 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A775A12AACA01800C7DB22 /* LoginView.swift */; };
 		D8A775A42AACA01A00C7DB22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8A775A32AACA01A00C7DB22 /* Assets.xcassets */; };
 		D8A775A82AACA01A00C7DB22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8A775A72AACA01A00C7DB22 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		D8A7759C2AACA01800C7DB22 /* SwUIFirebsChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwUIFirebsChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A7759F2AACA01800C7DB22 /* SwUIFirebsChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwUIFirebsChatApp.swift; sourceTree = "<group>"; };
-		D8A775A12AACA01800C7DB22 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D8A775A12AACA01800C7DB22 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D8A775A32AACA01A00C7DB22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8A775A52AACA01A00C7DB22 /* SwUIFirebsChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwUIFirebsChat.entitlements; sourceTree = "<group>"; };
 		D8A775A72AACA01A00C7DB22 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				D8A7759F2AACA01800C7DB22 /* SwUIFirebsChatApp.swift */,
-				D8A775A12AACA01800C7DB22 /* ContentView.swift */,
+				D8A775A12AACA01800C7DB22 /* LoginView.swift */,
 				D8A775A32AACA01A00C7DB22 /* Assets.xcassets */,
 				D8A775A52AACA01A00C7DB22 /* SwUIFirebsChat.entitlements */,
 				D8A775A62AACA01A00C7DB22 /* Preview Content */,
@@ -139,7 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8A775A22AACA01800C7DB22 /* ContentView.swift in Sources */,
+				D8A775A22AACA01800C7DB22 /* LoginView.swift in Sources */,
 				D8A775A02AACA01800C7DB22 /* SwUIFirebsChatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
