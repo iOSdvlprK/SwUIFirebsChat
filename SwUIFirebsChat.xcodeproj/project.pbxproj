@@ -15,6 +15,7 @@
 		D8A775A22AACA01800C7DB22 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A775A12AACA01800C7DB22 /* LoginView.swift */; };
 		D8A775A42AACA01A00C7DB22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8A775A32AACA01A00C7DB22 /* Assets.xcassets */; };
 		D8A775A82AACA01A00C7DB22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8A775A72AACA01A00C7DB22 /* Preview Assets.xcassets */; };
+		D8BD176A2AAF495A00A6FC4B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD17692AAF495A00A6FC4B /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		D8A775A32AACA01A00C7DB22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8A775A52AACA01A00C7DB22 /* SwUIFirebsChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwUIFirebsChat.entitlements; sourceTree = "<group>"; };
 		D8A775A72AACA01A00C7DB22 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D8BD17692AAF495A00A6FC4B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				D8A7759F2AACA01800C7DB22 /* SwUIFirebsChatApp.swift */,
 				D8A775A12AACA01800C7DB22 /* LoginView.swift */,
+				D8BD17692AAF495A00A6FC4B /* ImagePicker.swift */,
 				D89B21372AAE068C00115375 /* GoogleService-Info.plist */,
 				D8A775A32AACA01A00C7DB22 /* Assets.xcassets */,
 				D8A775A52AACA01A00C7DB22 /* SwUIFirebsChat.entitlements */,
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8BD176A2AAF495A00A6FC4B /* ImagePicker.swift in Sources */,
 				D8A775A22AACA01800C7DB22 /* LoginView.swift in Sources */,
 				D8A775A02AACA01800C7DB22 /* SwUIFirebsChatApp.swift in Sources */,
 			);
