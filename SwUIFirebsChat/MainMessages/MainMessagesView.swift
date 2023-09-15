@@ -59,22 +59,30 @@ struct MainMessagesView: View {
     @ObservedObject private var vm = MainMessagesViewModel()
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
 //                Text("User: \(vm.chatUser?.uid ?? "")")
                 
                 customNavBar
                 messagesView
                 
+                /*
                 NavigationLink("", isActive: $shouldNavigateToChatLogView, destination: {
                     ChatLogView(chatUser: self.chatUser)
                 })
+                */
+                Button("") {
+                    shouldNavigateToChatLogView = true
+                }
             }
             .overlay(
                 newMessageButton, alignment: .bottom
             )
             .navigationBarHidden(true)
             .navigationBarTitleDisplayMode(.inline)
+            .navigationDestination(isPresented: $shouldNavigateToChatLogView) {
+                ChatLogView(chatUser: self.chatUser)
+            }
         }
     }
     
@@ -203,19 +211,6 @@ struct MainMessagesView: View {
     }
     
     @State private var chatUser: ChatUser?
-}
-
-struct ChatLogView: View {
-    let chatUser: ChatUser?
-    
-    var body: some View {
-        ScrollView {
-            ForEach(0..<10) { num in
-                Text("FAKE MESSAGE FOR NOW")
-            }
-        }
-        .navigationTitle(chatUser?.email ?? "")
-    }
 }
 
 struct MainMessagesView_Previews: PreviewProvider {
