@@ -71,9 +71,9 @@ struct MainMessagesView: View {
                     ChatLogView(chatUser: self.chatUser)
                 })
                 */
-                Button("") {
-                    shouldNavigateToChatLogView = true
-                }
+//                Button("") {
+//                    shouldNavigateToChatLogView = true
+//                }
             }
             .overlay(
                 newMessageButton, alignment: .bottom
