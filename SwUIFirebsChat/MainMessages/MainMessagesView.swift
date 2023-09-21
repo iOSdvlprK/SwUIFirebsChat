@@ -9,25 +9,6 @@ import SwiftUI
 import SDWebImageSwiftUI
 import Firebase
 
-struct RecentMessage: Identifiable {
-    var id: String { documentId }
-    
-    let documentId: String
-    let text, fromId, toId: String
-    let email, profileImageUrl: String
-    let timestamp: Timestamp
-    
-    init(documentId: String, data: [String: Any]) {
-        self.documentId = documentId
-        self.text = data["text"] as? String ?? ""
-        self.fromId = data["fromId"] as? String ?? ""
-        self.toId = data["toId"] as? String ?? ""
-        self.email = data["email"] as? String ?? ""
-        self.profileImageUrl = data["profileImageUrl"] as? String ?? ""
-        self.timestamp = data["timestamp"] as? Timestamp ?? Timestamp(date: Date())
-    }
-}
-
 class MainMessagesViewModel: ObservableObject {
     @Published var errorMessage = ""
     @Published var chatUser: ChatUser?
@@ -67,7 +48,6 @@ class MainMessagesViewModel: ObservableObject {
                         self.recentMessages.remove(at: index)
                     }
                     
-//                    self.recentMessages.append(RecentMessage(documentId: docId, data: change.document.data()))
                     self.recentMessages.insert(RecentMessage(documentId: docId, data: change.document.data()), at: 0)
                 })
             }
@@ -209,6 +189,7 @@ struct MainMessagesView: View {
                                 Text(recentMessage.email)
                                     .font(.system(size: 16, weight: .bold))
                                     .foregroundColor(Color(.label))
+                                    .multilineTextAlignment(.leading)
                                 Text(recentMessage.text)
                                     .font(.system(size: 14, weight: .bold))
                                     .foregroundColor(Color(.lightGray))
@@ -216,7 +197,7 @@ struct MainMessagesView: View {
                             }
                             Spacer()
                             
-                            Text("22d")
+                            Text(recentMessage.timestamp.description)
                                 .font(.system(size: 14, weight: .semibold))
                         }
                     }
