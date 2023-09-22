@@ -18,13 +18,23 @@ struct RecentMessage: Identifiable {
     let email, profileImageUrl: String
     let timestamp: Date
     
+    var username: String {
+        email.components(separatedBy: "@").first ?? email
+    }
+    
+    var timeAgo: String {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .abbreviated
+        return formatter.localizedString(for: timestamp, relativeTo: Date())
+    }
+    
     init(documentId: String, data: [String: Any]) {
         self.documentId = documentId
-        self.text = data["text"] as? String ?? ""
-        self.fromId = data["fromId"] as? String ?? ""
-        self.toId = data["toId"] as? String ?? ""
-        self.email = data["email"] as? String ?? ""
-        self.profileImageUrl = data["profileImageUrl"] as? String ?? ""
-        self.timestamp = data["timestamp"] as? Date ?? Date()
+        self.text = data[FirebaseConstants.text] as? String ?? ""
+        self.fromId = data[FirebaseConstants.fromId] as? String ?? ""
+        self.toId = data[FirebaseConstants.toId] as? String ?? ""
+        self.email = data[FirebaseConstants.email] as? String ?? ""
+        self.profileImageUrl = data[FirebaseConstants.profileImageUrl] as? String ?? ""
+        self.timestamp = (data[FirebaseConstants.timestamp] as? Timestamp)?.dateValue() ?? Date()
     }
 }
